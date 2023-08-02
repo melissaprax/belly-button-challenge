@@ -31,7 +31,6 @@ function init() {
         gauge(name);
     });
 }
-
 // Make the demographics panel
 function demo(selectedValue) {
     // Fetch the JSON data and console log it
@@ -65,7 +64,6 @@ function demo(selectedValue) {
         console.log(entries);
     });
   }
-
 
 
 // Make the bar chart
@@ -137,6 +135,7 @@ function bubble(selectedValue) {
         Plotly.newPlot("bubble", trace, layout);
     });
 }
+
 // Make the gauge chart
 function gauge(selectedValue) {
     // Fetch the JSON data and console log it
@@ -181,5 +180,14 @@ function gauge(selectedValue) {
     });
 }
 
+// Toggle to new plots when option changed
+function optionChanged(selectedValue) {
+    demo(selectedValue);
+    bar(selectedValue);
+    bubble(selectedValue);
+    gauge(selectedValue)
+}
+
+init();
 
 
